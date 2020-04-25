@@ -5,8 +5,8 @@ services:
   image: amarsmart403/studentapp-image
   ports:
    - 8080:8080
- deploy:
-  replicas: 2
+  deploy:
+   replicas: 2
   
    
  mydb:
