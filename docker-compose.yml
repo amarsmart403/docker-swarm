@@ -1,0 +1,23 @@
+---
+version: '3'
+services:
+ app:
+  image: amarsmart403/studentapp-image
+  ports:
+   - 8080:8080
+ deploy:
+  replicas: 2
+  
+   
+ mydb:
+  image: amarsmart403/mariadb
+  ports:
+   - 3306:3306
+  environment:
+   MYSQL_ROOT_PASSWORD: Temp123
+   
+networks:
+ default:
+  external:
+   name: customoverlay
+  
